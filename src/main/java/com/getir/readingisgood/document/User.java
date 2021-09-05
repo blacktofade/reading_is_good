@@ -1,8 +1,6 @@
 package com.getir.readingisgood.document;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,7 +10,9 @@ import javax.validation.constraints.NotBlank;
 @EqualsAndHashCode(callSuper = true)
 @Document(collection= "users")
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class User extends AuditDocument {
     @Id
     private String id;
