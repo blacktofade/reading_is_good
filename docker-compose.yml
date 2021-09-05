@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  mongo_db:
+    image: "mongo:5.0.2"
+    container_name: mongo_db
+    command: mongod --port 27017
+    restart: always
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+  reading-is-good:
+    build: .
+    image: reading-is-good
+    container_name: reading-is-good
+    ports:
+      - "8080:8080"
+    restart: on-failure
+    depends_on:
+      - mongo_db
+    links:
+      - mongo_db:app_db
