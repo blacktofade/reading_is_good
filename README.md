@@ -21,9 +21,9 @@ customers within the same day. <br>
 
 You need to clone project first and you can run docker-compose.yml
 
-**SWAGGER - POSTMAN** <br>
+**SWAGGER ** <br>
 SWAGGER URL:`http://localhost:8080/swagger-ui.html` <br> 
-POSTMAN COLLECTION: `${PROJECT_DIR}\Reading Is Good REST API.postman_collection.json`
+POSTMAN COLLECTION: `${PROJECT_DIR}\BookRetail.postman_collection.json`
 
 ## How to use?
 There are two user type in this project. First one is `ADMIN` and the other one is `CUSTOMER`. When the project runs, the first signUp request sets the admin user. So you can decide the `ADMIN` username, password and email. After that you should use this `ADMIN` account for authorization required processes. Also all other signUp requests create `CUSTOMER` account.<br> <br>
